@@ -37,19 +37,6 @@ AutoApply is an application that finds roles matching your profile, fills the ap
 
 <br>
 
-<table>
-  <tr>
-    <td width="50%"><img src="../screenshots/profile.png" alt="Profile: load your details once" width="100%" /></td>
-    <td width="50%"><img src="../screenshots/results.png" alt="Search results with match score" width="100%" /></td>
-  </tr>
-  <tr>
-    <td width="50%"><img src="../screenshots/history.png" alt="Submitted applications history" width="100%" /></td>
-    <td width="50%"><img src="../screenshots/settings.png" alt="Settings: sound alert and Stop" width="100%" /></td>
-  </tr>
-</table>
-
-<br>
-
 ## Index 📜
 
 <details>
@@ -391,7 +378,20 @@ A backup includes profile, accounts, histories, search settings and CVs as Base6
 
 <br>
 
-#### 3.0.1) Recommended walkthrough (demo)
+#### 3.0.1) Demo screenshots
+
+<table>
+  <tr>
+    <td width="50%"><img src="../screenshots/profile.png" alt="Profile: load your details once" width="100%" /></td>
+    <td width="50%"><img src="../screenshots/results.png" alt="Search results with match score" width="100%" /></td>
+  </tr>
+  <tr>
+    <td width="50%"><img src="../screenshots/history.png" alt="Submitted applications history" width="100%" /></td>
+    <td width="50%"><img src="../screenshots/settings.png" alt="Settings: sound alert and Stop" width="100%" /></td>
+  </tr>
+</table>
+
+#### 3.0.2) Recommended walkthrough (demo)
 
 1. Open **My profile** and look at (or edit) the fictional data. Do not load personal information into the public sandbox.
 2. In **Job search**, move filters: freshness, technologies, languages, exclusions.
@@ -404,7 +404,7 @@ Test credentials for the fictional portal (they do not work on real sites):
 
 `alex.rivera@example.invalid` / `Demo-Only-2026!`
 
-#### 3.0.2) Automated tests
+#### 3.0.3) Automated tests
 
 ```bash
 npm test
@@ -412,7 +412,7 @@ npm test
 
 The suite covers filters, history, stop, persistence, demo isolation and UI walks with Playwright. You do not need AutoApply already running. Tests do not apply to companies or use real accounts.
 
-#### 3.0.3) Process health
+#### 3.0.4) Process health
 
 ```bash
 # local

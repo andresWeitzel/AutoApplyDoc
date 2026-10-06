@@ -37,19 +37,6 @@ AutoApply es una aplicación que busca oportunidades con tu perfil, completa la 
 
 <br>
 
-<table>
-  <tr>
-    <td width="50%"><img src="./doc/assets/screenshots/profile.png" alt="Perfil: cargá tus datos una vez" width="100%" /></td>
-    <td width="50%"><img src="./doc/assets/screenshots/results.png" alt="Resultados con coincidencia orientativa" width="100%" /></td>
-  </tr>
-  <tr>
-    <td width="50%"><img src="./doc/assets/screenshots/history.png" alt="Historial de postulaciones enviadas" width="100%" /></td>
-    <td width="50%"><img src="./doc/assets/screenshots/settings.png" alt="Configuración: aviso sonoro y Detener" width="100%" /></td>
-  </tr>
-</table>
-
-<br>
-
 ## Índice 📜
 
 <details>
@@ -391,7 +378,20 @@ El backup incluye perfil, cuentas, historiales, configuración de búsqueda y CV
 
 <br>
 
-#### 3.0.1) Recorrido recomendado (demo)
+#### 3.0.1) Capturas de la demo
+
+<table>
+  <tr>
+    <td width="50%"><img src="./doc/assets/screenshots/profile.png" alt="Perfil: cargá tus datos una vez" width="100%" /></td>
+    <td width="50%"><img src="./doc/assets/screenshots/results.png" alt="Resultados con coincidencia orientativa" width="100%" /></td>
+  </tr>
+  <tr>
+    <td width="50%"><img src="./doc/assets/screenshots/history.png" alt="Historial de postulaciones enviadas" width="100%" /></td>
+    <td width="50%"><img src="./doc/assets/screenshots/settings.png" alt="Configuración: aviso sonoro y Detener" width="100%" /></td>
+  </tr>
+</table>
+
+#### 3.0.2) Recorrido recomendado (demo)
 
 1. Abrí **Mi perfil** y mirá (o editá) los datos ficticios. No cargues información personal en el sandbox público.
 2. En **Buscar empleos**, mové filtros: publicación, tecnologías, idiomas, exclusiones.
@@ -404,7 +404,7 @@ Credenciales de prueba del portal ficticio (no sirven en sitios reales):
 
 `alex.rivera@example.invalid` / `Demo-Only-2026!`
 
-#### 3.0.2) Tests automatizados
+#### 3.0.3) Tests automatizados
 
 ```bash
 npm test
@@ -412,7 +412,7 @@ npm test
 
 La suite cubre filtros, historial, detención, persistencia, aislamiento de la demo y recorridos de interfaz con Playwright. No necesita que tengas AutoApply abierto. Las pruebas no postulan a empresas ni usan cuentas reales.
 
-#### 3.0.3) Salud del proceso
+#### 3.0.4) Salud del proceso
 
 ```bash
 # local
