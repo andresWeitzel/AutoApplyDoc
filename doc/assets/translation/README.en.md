@@ -29,7 +29,7 @@
 
 </div>
 
-AutoApply is an application that finds roles matching your profile, fills the application and hands control back before you submit. You load your details **once** and every listing reuses them: **search, fill, confirm.** The final send is yours — more applications covered, zero blind submits.
+AutoApply is an application that finds roles matching your profile, fills the application and hands control back before you submit. You load your details **once** and every listing reuses them. It includes **filters** to refine the search, update your profile and manage history, settings and the rest of the flow. **Search, fill, confirm** — the final send is yours.
 
 <div align="left">
 <a href="https://autoapply-demo-1tjt.onrender.com/" target="_blank" rel="noopener noreferrer" title="Live"><img src="../icons/detail-actions/live-pill.svg" alt="Live" width="96" height="32" border="0" /></a>
@@ -89,21 +89,23 @@ Applying today is a second job: the same phone number, the same CV and the same 
 
 AutoApply cuts that friction. **One profile. A search that understands your stack. Autofill that types for you.** A history so you do not apply twice. And a rule that does not bend: you send the application. This is not a bot that fires CVs blindly; it is an assistant that speeds up the repetitive part and leaves you what matters.
 
-Try the product in a minute, no install: **[live demo on Render](https://autoapply-demo-1tjt.onrender.com/)** — fictional profile, test portal, no real accounts.
+**Locally it is the real product.** It searches live listings, opens its own Chromium, fills portal and ATS forms, stores your profile and accounts, and you submit the application. Filters, history, settings and attachments run against the real world.
+
+**The public demo is limited on purpose.** On [Render](https://autoapply-demo-1tjt.onrender.com/) you walk the same UI with a fictional profile and a test portal: no application Chromium, no real accounts, and **no applications sent to companies**. It is there to show the flow without installing anything and without risking data or other people’s vacancies.
 
 Why it exists:
 
 * Copy-paste across job boards burns hours and introduces mistakes. AutoApply concentrates your data and types it into the form.
 * An “auto-apply” that hits Submit without review is the shortcut that does the most damage. Submit is **manual on purpose**.
-* Recruiters and reviewers walk the **same UI** at [https://autoapply-demo-1tjt.onrender.com](https://autoapply-demo-1tjt.onrender.com/) (see 3.1).
+* Recruiters and reviewers walk the **same UI** in the demo; the full flow runs locally (see 1.1 and 3.1).
 
 What the product delivers:
 
 * **Find roles that fit.** Portals such as LinkedIn, Indeed, Bumeran, Get on Board, Computrabajo, ZonaJobs, Tecnoempleo, Remotive and Remote OK, with filters for role, work mode, technologies and languages — plus a match score to prioritize, not to promise an offer.
 * **Load the profile once.** Identity, contact, per-technology experience, education, CV (PDF, DOC, DOCX) and saved answers. The next listing reuses all of it.
-* **Autofill, do not send blind.** Own Chromium: text, selects, radios, attachments. The red **Stop** button returns control with what was already filled.
+* **Autofill, do not send blind.** Locally, own Chromium: text, selects, radios, attachments. The red **Stop** button returns control with what was already filled. In the demo, fill is shown on a controlled form.
 * **Keep a trail.** Submitted history, opened opportunities and “not a fit”, so you neither repeat nor see again what you already dismissed.
-* **Your data stays with you.** Profile, accounts and backups on your machine. The public demo uses a made-up profile and never touches real job boards.
+* **Your data stays with you.** Locally, profile, accounts and backups on your machine. The demo does not read that disk: it uses sample data and resets with the sandbox.
 
 **Requirements (local version):**
 
@@ -162,7 +164,7 @@ npm run build:demo
 npm run start:demo
 ```
 
-Opens `http://127.0.0.1:8788` (or the next free port). It can run next to the local app on 8787. After code changes, rebuild and restart the demo.
+Opens `http://127.0.0.1:8788` (or the next free port). It can run next to the local app on 8787. After code changes, rebuild and restart the demo. It is limited on purpose: same UI, sample data, **no applications to companies**.
 
 #### Useful scripts
 
@@ -243,7 +245,7 @@ The Render demo **does not** launch Playwright. The public walkthrough uses a sa
 
 <br>
 
-The UI is the same idea locally and in the demo. The scope changes: local talks to real portals; the demo uses a catalog and a test form.
+The UI is the same idea locally and in the demo. The scope changes: **locally the flow is real** (portals, Chromium, applications you submit); **the demo is limited** to a catalog and a test form, for the usual reasons: no install, no leaked data, no other people’s vacancies.
 
 | Environment | For |
 |-------------|-----|
@@ -436,7 +438,7 @@ curl -s https://autoapply-demo-1tjt.onrender.com/api/health
 
 Public demo: **[https://autoapply-demo-1tjt.onrender.com](https://autoapply-demo-1tjt.onrender.com/)**
 
-The Render service **is the demo** (`build:demo` + `start:demo`), not the personal app. Free instance: HTTPS, fictional profile, no Playwright and no persistent disk.
+The Render service **is the demo** (`build:demo` + `start:demo`), not the personal app. The cut is deliberate: locally it does search, fill and apply for real (you submit); here it never touches companies or real accounts. Free instance: HTTPS, fictional profile, no Playwright and no persistent disk.
 
 | This yes | This no (Free) |
 |----------|----------------|

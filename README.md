@@ -29,7 +29,7 @@
 
 </div>
 
-AutoApply es una aplicación que busca oportunidades con tu perfil, completa la postulación y te devuelve el control antes de enviar. Cargás tus datos **una vez** y cada aviso se rellena con eso: **buscá, completá, confirmá.** El envío final lo hacés vos — más avisos cubiertos, cero envíos a ciegas.
+AutoApply es una aplicación que busca oportunidades con tu perfil, completa la postulación y te devuelve el control antes de enviar. Cargás tus datos **una vez** y cada aviso se rellena con eso. Incluye **filtros** para afinar la búsqueda, actualizar tu perfil y manejar historial, configuración y el resto del flujo. **Buscá, completá, confirmá** — el envío final lo hacés vos.
 
 <div align="left">
 <a href="https://autoapply-demo-1tjt.onrender.com/" target="_blank" rel="noopener noreferrer" title="Ver live"><img src="./doc/assets/icons/detail-actions/ver-live-pill.svg" alt="Ver live" width="96" height="32" border="0" /></a>
@@ -89,21 +89,23 @@ Postular hoy es un segundo trabajo: el mismo teléfono, el mismo CV y las mismas
 
 AutoApply corta esa fricción. **Un perfil. Una búsqueda que entiende tu stack. Un autocompletado que escribe por vos.** Un historial para no postular dos veces. Y un principio que no se negocia: vos mandás la solicitud. No es un bot que dispara CVs a ciegas; es un asistente que acelera lo repetible y te deja lo que importa.
 
-Probá el producto en un minuto, sin instalar nada: **[demo en Render](https://autoapply-demo-1tjt.onrender.com/)** — perfil ficticio, portal de prueba, cero cuentas reales.
+**En local es el producto de verdad.** Busca avisos reales, abre su Chromium, completa formularios de portales y ATS, guarda tu perfil y tus cuentas, y vos enviás la postulación. Filtros, historial, configuración y adjuntos corren contra el mundo real.
+
+**La demo pública está acotada a propósito.** En [Render](https://autoapply-demo-1tjt.onrender.com/) recorré la misma interfaz con un perfil ficticio y un portal de prueba: no hay Chrome de postulaciones, no se entra a cuentas reales y **no se envían solicitudes a empresas**. Es para mostrar el flujo sin instalar nada y sin arriesgar datos ni vacantes ajenas.
 
 Para qué existe:
 
 * El copy-paste entre portales come horas y genera errores. AutoApply concentra tus datos y los escribe en el formulario.
 * Un “apply automático” que pulsa Enviar sin revisión es el atajo que más daño hace. Acá el envío es **manual a propósito**.
-* Reclutadores y reviewers recorren la **misma interfaz** en [https://autoapply-demo-1tjt.onrender.com](https://autoapply-demo-1tjt.onrender.com/) (ver 3.1).
+* Reclutadores y reviewers recorren la **misma interfaz** en la demo; quien quiere el flujo completo lo corre en local (ver 1.1 y 3.1).
 
 Qué entrega el producto:
 
 * **Encontrá avisos que encajan.** Portales como LinkedIn, Indeed, Bumeran, Get on Board, Computrabajo, ZonaJobs, Tecnoempleo, Remotive y Remote OK, con filtros de puesto, modalidad, tecnologías e idiomas — y un puntaje de coincidencia para priorizar, no para prometer una oferta.
 * **Cargá el perfil una vez.** Identidad, contacto, experiencia por tecnología, estudios, CV (PDF, DOC, DOCX) y respuestas habituales. El próximo aviso reutiliza todo.
-* **Autocompletá, no envíes a ciegas.** Chromium propio: texto, selects, radios, adjuntos. El botón rojo **Detener** te devuelve el control con lo ya cargado.
+* **Autocompletá, no envíes a ciegas.** En local, Chromium propio: texto, selects, radios, adjuntos. El botón rojo **Detener** te devuelve el control con lo ya cargado. En la demo el llenado se ve sobre un formulario controlado.
 * **Seguí el rastro.** Historial de enviadas, oportunidades abiertas y “no aplica”, para no repetir ni volver a ver lo que ya descartaste.
-* **Tus datos se quedan con vos.** Perfil, cuentas y backups en tu máquina. La demo pública usa un perfil inventado y no toca portales reales.
+* **Tus datos se quedan con vos.** En local, perfil, cuentas y backups en tu máquina. La demo no lee ese disco: usa datos de prueba y se reinicia con el sandbox.
 
 **Requisitos (versión local):**
 
@@ -162,7 +164,7 @@ npm run build:demo
 npm run start:demo
 ```
 
-Abre `http://127.0.0.1:8788` (o el siguiente puerto libre). Puede convivir con la app local en 8787. Después de cambiar código, reconstruí y reiniciá la demo.
+Abre `http://127.0.0.1:8788` (o el siguiente puerto libre). Puede convivir con la app local en 8787. Después de cambiar código, reconstruí y reiniciá la demo. Es un recorte a propósito: misma UI, datos de prueba, **sin postular a empresas**.
 
 #### Scripts útiles
 
@@ -243,7 +245,7 @@ La demo de Render **no** lanza Playwright. El recorrido público usa un portal d
 
 <br>
 
-La interfaz es la misma idea en local y en la demo. Cambia el alcance: local habla con portales reales; la demo, con un catálogo y un formulario de prueba.
+La interfaz es la misma idea en local y en la demo. Cambia el alcance: **en local el flujo es real** (portales, Chromium, postulaciones que vos enviás); **la demo está acotada** a un catálogo y un formulario de prueba, por las mismas razones de siempre: no instalar, no filtrar datos y no tocar vacantes ajenas.
 
 | Entorno | Para |
 |---------|------|
@@ -436,7 +438,7 @@ curl -s https://autoapply-demo-1tjt.onrender.com/api/health
 
 Demo pública: **[https://autoapply-demo-1tjt.onrender.com](https://autoapply-demo-1tjt.onrender.com/)**
 
-El servicio en Render **es la demo** (`build:demo` + `start:demo`), no la aplicación personal. Instancia Free: HTTPS, perfil ficticio, sin Playwright y sin disco persistente.
+El servicio en Render **es la demo** (`build:demo` + `start:demo`), no la aplicación personal. El recorte es deliberado: en local sí busca, completa y postula de verdad (vos enviás); acá no se tocan empresas ni cuentas reales. Instancia Free: HTTPS, perfil ficticio, sin Playwright y sin disco persistente.
 
 | Esto sí | Esto no (Free) |
 |---------|----------------|
