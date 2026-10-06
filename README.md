@@ -1,5 +1,5 @@
 <div align="center">
-<img src="./doc/assets/autoapply-background.es.svg" alt="AutoApply" width="100%" />
+<img src="./doc/assets/screenshots/search.png" alt="AutoApply — Encontrá tu próxima oportunidad" width="100%" />
 <div align="right">
 <img width="16" height="16" src="./doc/assets/icons/frontend/svg/react.svg" alt="React" />
 <img width="16" height="16" src="./doc/assets/icons/frontend/svg/vite.svg" alt="Vite" />
@@ -29,11 +29,24 @@
 
 </div>
 
-AutoApply reúne búsqueda de empleos, tu perfil y el autocompletado de postulaciones en un solo lugar. Encontrás avisos, completás formularios con tus datos y revisás cada campo antes de confirmar. **El envío final lo hacés vos.** Menos copiar y pegar, más control sobre cada postulación.
+AutoApply es una aplicación que busca oportunidades con tu perfil, completa la postulación y te devuelve el control antes de enviar. Cargás tus datos **una vez** y cada aviso se rellena con eso: **buscá, completá, confirmá.** El envío final lo hacés vos — más avisos cubiertos, cero envíos a ciegas.
 
 <div align="left">
-<a href="#31-sandbox-alojado-render-" title="Ver live"><img src="./doc/assets/icons/detail-actions/ver-live-pill.svg" alt="Ver live" width="96" height="32" border="0" /></a>
+<a href="https://autoapply-demo-1tjt.onrender.com/" target="_blank" rel="noopener noreferrer" title="Ver live"><img src="./doc/assets/icons/detail-actions/ver-live-pill.svg" alt="Ver live" width="96" height="32" border="0" /></a>
 </div>
+
+<br>
+
+<table>
+  <tr>
+    <td width="50%"><img src="./doc/assets/screenshots/profile.png" alt="Perfil: cargá tus datos una vez" width="100%" /></td>
+    <td width="50%"><img src="./doc/assets/screenshots/results.png" alt="Resultados con coincidencia orientativa" width="100%" /></td>
+  </tr>
+  <tr>
+    <td width="50%"><img src="./doc/assets/screenshots/history.png" alt="Historial de postulaciones enviadas" width="100%" /></td>
+    <td width="50%"><img src="./doc/assets/screenshots/settings.png" alt="Configuración: aviso sonoro y Detener" width="100%" /></td>
+  </tr>
+</table>
 
 <br>
 
@@ -85,31 +98,25 @@ AutoApply reúne búsqueda de empleos, tu perfil y el autocompletado de postulac
 
 <br>
 
-Esto es un **asistente de postulaciones**, no un bot que manda CVs a ciegas. Guardás un perfil, buscás avisos, abrís un formulario y AutoApply completa lo que puede resolver. Vos revisás, resolvés lo humano (CAPTCHA, códigos, el botón final) y confirmás el envío en el historial.
+Postular hoy es un segundo trabajo: el mismo teléfono, el mismo CV y las mismas respuestas, una y otra vez, en LinkedIn, Indeed, Bumeran y el ATS de turno.
+
+AutoApply corta esa fricción. **Un perfil. Una búsqueda que entiende tu stack. Un autocompletado que escribe por vos.** Un historial para no postular dos veces. Y un principio que no se negocia: vos mandás la solicitud. No es un bot que dispara CVs a ciegas; es un asistente que acelera lo repetible y te deja lo que importa.
+
+Probá el producto en un minuto, sin instalar nada: **[demo en Render](https://autoapply-demo-1tjt.onrender.com/)** — perfil ficticio, portal de prueba, cero cuentas reales.
 
 Para qué existe:
 
-* Postular sigue siendo copiar nombre, teléfono, experiencia y CV en diez portales distintos. AutoApply concentra esos datos y los escribe en el formulario.
+* El copy-paste entre portales come horas y genera errores. AutoApply concentra tus datos y los escribe en el formulario.
 * Un “apply automático” que pulsa Enviar sin revisión es el atajo que más daño hace. Acá el envío es **manual a propósito**.
-* Sandbox para reclutadores / reviewers: la **demo pública** corre en Render con un perfil ficticio. No usa cuentas reales ni postula a empresas (ver 3.1).
+* Reclutadores y reviewers recorren la **misma interfaz** en [https://autoapply-demo-1tjt.onrender.com](https://autoapply-demo-1tjt.onrender.com/) (ver 3.1).
 
 Qué entrega el producto:
 
-* **Cinco secciones:** Nueva postulación, Buscar empleos, Mi perfil, Historial y Configuración.
-* **Búsqueda en portales** como LinkedIn, Indeed, Bumeran, Get on Board, Computrabajo, ZonaJobs, Tecnoempleo, Remotive y Remote OK. Filtros de puesto, modalidad, antigüedad, tecnologías, idiomas y empresas.
-* **Puntaje de coincidencia** orientativo: sirve para ordenar, no promete una contratación.
-* **Perfil reutilizable:** identidad, contacto, experiencia por tecnología, estudios, disponibilidad y respuestas habituales.
-* **Más de un CV:** PDF, DOC o DOCX; la app elige la variante según el aviso y vos la revisás antes de postular.
-* **Autocompletado en Chromium propio:** texto, selects, radios, checkboxes, adjuntos y controles accesibles. No toma el Chrome personal.
-* **Detener en cualquier momento:** el botón rojo corta la automatización, deja lo ya cargado y te devuelve el control.
-* **Cola de avisos:** varios enlaces, un aviso a la vez. No hay ráfaga de envíos.
-* **Historial dual:** postulaciones enviadas (cuando vos confirmás) y oportunidades abiertas (cuando abrís un aviso).
-* **Prevención de duplicados** sobre el historial confirmado, con identidades específicas en portales que reutilizan la misma ruta.
-* **Cuentas de sitios:** se guardan localmente; el acceso se verifica al usarlas. CAPTCHA y MFA quedan en el navegador, a cargo tuyo.
-* **Backups locales** del perfil, historial y configuración, sin subir tu vida laboral a un SaaS.
-* **Demo pública aislada:** perfil inventado, portal de prueba y sesión por visitante. Pensada para mostrar el producto, no para postular de verdad.
-
-La versión de escritorio vive en tu máquina. La demo de Render es el mismo producto recortado para que cualquiera lo recorra sin instalar nada.
+* **Encontrá avisos que encajan.** Portales como LinkedIn, Indeed, Bumeran, Get on Board, Computrabajo, ZonaJobs, Tecnoempleo, Remotive y Remote OK, con filtros de puesto, modalidad, tecnologías e idiomas — y un puntaje de coincidencia para priorizar, no para prometer una oferta.
+* **Cargá el perfil una vez.** Identidad, contacto, experiencia por tecnología, estudios, CV (PDF, DOC, DOCX) y respuestas habituales. El próximo aviso reutiliza todo.
+* **Autocompletá, no envíes a ciegas.** Chromium propio: texto, selects, radios, adjuntos. El botón rojo **Detener** te devuelve el control con lo ya cargado.
+* **Seguí el rastro.** Historial de enviadas, oportunidades abiertas y “no aplica”, para no repetir ni volver a ver lo que ya descartaste.
+* **Tus datos se quedan con vos.** Perfil, cuentas y backups en tu máquina. La demo pública usa un perfil inventado y no toca portales reales.
 
 **Requisitos (versión local):**
 
@@ -254,7 +261,7 @@ La interfaz es la misma idea en local y en la demo. Cambia el alcance: local hab
 | Entorno | Para |
 |---------|------|
 | **Local** | `http://127.0.0.1:8787` — uso personal, Chromium, portales reales |
-| **Demo (Render)** | sandbox público — perfil ficticio, sin postulaciones a empresas |
+| **Demo (Render)** | [autoapply-demo-1tjt.onrender.com](https://autoapply-demo-1tjt.onrender.com/) — perfil ficticio, sin postulaciones a empresas |
 
 1. Completás (o revisás) **Mi perfil**: nombre, contacto, experiencia, CV.
 2. Elegís un aviso: lo pegás en **Nueva postulación** o lo llevás desde **Buscar empleos**.
@@ -413,6 +420,9 @@ curl -s http://127.0.0.1:8787/api/health
 
 # demo local
 curl -s http://127.0.0.1:8788/api/health
+
+# demo en Render
+curl -s https://autoapply-demo-1tjt.onrender.com/api/health
 ```
 
 </details>
@@ -424,7 +434,7 @@ curl -s http://127.0.0.1:8788/api/health
 
 <br>
 
-Demo pública: **enlace de Render pendiente** (el botón *Ver live* de arriba va a apuntar ahí apenas esté publicado).
+Demo pública: **[https://autoapply-demo-1tjt.onrender.com](https://autoapply-demo-1tjt.onrender.com/)**
 
 El servicio en Render **es la demo** (`build:demo` + `start:demo`), no la aplicación personal. Instancia Free: HTTPS, perfil ficticio, sin Playwright y sin disco persistente.
 
@@ -470,6 +480,6 @@ ISC. Desarrollado por [Andrés Weitzel](https://github.com/andresWeitzel).
 **Links:**
 
 * **README en inglés:** [doc/assets/translation/README.en.md](./doc/assets/translation/README.en.md)
-* **Sandbox (Render):** se completa al publicar la demo
+* **Sandbox (Render):** [autoapply-demo-1tjt.onrender.com](https://autoapply-demo-1tjt.onrender.com/)
 
 </details>

@@ -1,5 +1,5 @@
 <div align="center">
-<img src="../autoapply-background.en.svg" alt="AutoApply" width="100%" />
+<img src="../screenshots/search.png" alt="AutoApply — Find your next opportunity" width="100%" />
 <div align="right">
 <img width="16" height="16" src="../icons/frontend/svg/react.svg" alt="React" />
 <img width="16" height="16" src="../icons/frontend/svg/vite.svg" alt="Vite" />
@@ -29,11 +29,24 @@
 
 </div>
 
-AutoApply brings job search, your profile and application autofill into one place. You find listings, fill forms with your data and review every field before you confirm. **The final submit is yours.** Less copy-paste, more control over each application.
+AutoApply is an application that finds roles matching your profile, fills the application and hands control back before you submit. You load your details **once** and every listing reuses them: **search, fill, confirm.** The final send is yours — more applications covered, zero blind submits.
 
 <div align="left">
-<a href="#31-hosted-sandbox-render-" title="Live"><img src="../icons/detail-actions/live-pill.svg" alt="Live" width="96" height="32" border="0" /></a>
+<a href="https://autoapply-demo-1tjt.onrender.com/" target="_blank" rel="noopener noreferrer" title="Live"><img src="../icons/detail-actions/live-pill.svg" alt="Live" width="96" height="32" border="0" /></a>
 </div>
+
+<br>
+
+<table>
+  <tr>
+    <td width="50%"><img src="../screenshots/profile.png" alt="Profile: load your details once" width="100%" /></td>
+    <td width="50%"><img src="../screenshots/results.png" alt="Search results with match score" width="100%" /></td>
+  </tr>
+  <tr>
+    <td width="50%"><img src="../screenshots/history.png" alt="Submitted applications history" width="100%" /></td>
+    <td width="50%"><img src="../screenshots/settings.png" alt="Settings: sound alert and Stop" width="100%" /></td>
+  </tr>
+</table>
 
 <br>
 
@@ -85,31 +98,25 @@ AutoApply brings job search, your profile and application autofill into one plac
 
 <br>
 
-This is a **job-application assistant**, not a bot that fires CVs blindly. You keep a profile, search listings, open a form and AutoApply fills what it can resolve. You review, handle the human steps (CAPTCHA, codes, the final button) and confirm the submit in history.
+Applying today is a second job: the same phone number, the same CV and the same answers, over and over, on LinkedIn, Indeed, Bumeran and whichever ATS comes next.
+
+AutoApply cuts that friction. **One profile. A search that understands your stack. Autofill that types for you.** A history so you do not apply twice. And a rule that does not bend: you send the application. This is not a bot that fires CVs blindly; it is an assistant that speeds up the repetitive part and leaves you what matters.
+
+Try the product in a minute, no install: **[live demo on Render](https://autoapply-demo-1tjt.onrender.com/)** — fictional profile, test portal, no real accounts.
 
 Why it exists:
 
-* Applying still means pasting name, phone, experience and a CV into ten different portals. AutoApply concentrates that data and types it into the form.
+* Copy-paste across job boards burns hours and introduces mistakes. AutoApply concentrates your data and types it into the form.
 * An “auto-apply” that hits Submit without review is the shortcut that does the most damage. Submit is **manual on purpose**.
-* Recruiter / reviewer sandbox: the **public demo** runs on Render with a fictional profile. It does not use real accounts or apply to companies (see 3.1).
+* Recruiters and reviewers walk the **same UI** at [https://autoapply-demo-1tjt.onrender.com](https://autoapply-demo-1tjt.onrender.com/) (see 3.1).
 
 What the product delivers:
 
-* **Five sections:** New application, Job search, My profile, History and Settings.
-* **Portal search** across LinkedIn, Indeed, Bumeran, Get on Board, Computrabajo, ZonaJobs, Tecnoempleo, Remotive and Remote OK. Filters for role, work mode, freshness, technologies, languages and companies.
-* **Match score** as a ranking hint — not a hiring promise.
-* **Reusable profile:** identity, contact, per-technology experience, education, availability and saved answers.
-* **More than one CV:** PDF, DOC or DOCX; the app picks a variant from the listing and you review it before applying.
-* **Autofill in its own Chromium:** text, selects, radios, checkboxes, attachments and accessible controls. It does not take over your personal Chrome.
-* **Stop at any time:** the red button cuts automation, keeps what was already filled and returns control to you.
-* **Listing queue:** several URLs, one job at a time. No burst of submissions.
-* **Dual history:** submitted applications (when you confirm) and opened opportunities (when you open a listing).
-* **Duplicate prevention** against confirmed history, with portal-specific identities when sites reuse the same path.
-* **Site accounts:** stored locally; access is verified when used. CAPTCHA and MFA stay in the browser, on you.
-* **Local backups** of profile, history and settings — your career data is not uploaded to a SaaS.
-* **Isolated public demo:** made-up profile, test portal and per-visitor session. Built to show the product, not to apply for real.
-
-The desktop version lives on your machine. The Render demo is the same product, trimmed so anyone can walk through it without installing anything.
+* **Find roles that fit.** Portals such as LinkedIn, Indeed, Bumeran, Get on Board, Computrabajo, ZonaJobs, Tecnoempleo, Remotive and Remote OK, with filters for role, work mode, technologies and languages — plus a match score to prioritize, not to promise an offer.
+* **Load the profile once.** Identity, contact, per-technology experience, education, CV (PDF, DOC, DOCX) and saved answers. The next listing reuses all of it.
+* **Autofill, do not send blind.** Own Chromium: text, selects, radios, attachments. The red **Stop** button returns control with what was already filled.
+* **Keep a trail.** Submitted history, opened opportunities and “not a fit”, so you neither repeat nor see again what you already dismissed.
+* **Your data stays with you.** Profile, accounts and backups on your machine. The public demo uses a made-up profile and never touches real job boards.
 
 **Requirements (local version):**
 
@@ -254,7 +261,7 @@ The UI is the same idea locally and in the demo. The scope changes: local talks 
 | Environment | For |
 |-------------|-----|
 | **Local** | `http://127.0.0.1:8787` — personal use, Chromium, real portals |
-| **Demo (Render)** | public sandbox — fictional profile, no applications to companies |
+| **Demo (Render)** | [autoapply-demo-1tjt.onrender.com](https://autoapply-demo-1tjt.onrender.com/) — fictional profile, no applications to companies |
 
 1. Complete (or review) **My profile**: name, contact, experience, CV.
 2. Pick a listing: paste it in **New application** or take it from **Job search**.
@@ -413,6 +420,9 @@ curl -s http://127.0.0.1:8787/api/health
 
 # local demo
 curl -s http://127.0.0.1:8788/api/health
+
+# Render demo
+curl -s https://autoapply-demo-1tjt.onrender.com/api/health
 ```
 
 </details>
@@ -424,7 +434,7 @@ curl -s http://127.0.0.1:8788/api/health
 
 <br>
 
-Public demo: **Render URL pending** (the *Live* button above will point there as soon as it is published).
+Public demo: **[https://autoapply-demo-1tjt.onrender.com](https://autoapply-demo-1tjt.onrender.com/)**
 
 The Render service **is the demo** (`build:demo` + `start:demo`), not the personal app. Free instance: HTTPS, fictional profile, no Playwright and no persistent disk.
 
@@ -470,6 +480,6 @@ ISC. Built by [Andrés Weitzel](https://github.com/andresWeitzel).
 **Links:**
 
 * **Spanish README:** [README.md](../../../README.md)
-* **Sandbox (Render):** filled in when the demo is published
+* **Sandbox (Render):** [autoapply-demo-1tjt.onrender.com](https://autoapply-demo-1tjt.onrender.com/)
 
 </details>
