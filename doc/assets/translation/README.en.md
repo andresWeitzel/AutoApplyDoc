@@ -199,6 +199,31 @@ autoapply/
     Spanish and English README (this repository)
 ```
 
+The **application** repository is private: this AutoApplyDoc documents the product; it does not publish the source. The captures below illustrate real pieces (server, local data, backups and the demo export) **without the full code or secrets**.
+
+<table>
+  <tr>
+    <td width="50%" valign="top">
+      <img src="../code/server.png" alt="Local server: search, fill, ATS and demo" width="100%" />
+      <p align="center"><em>Local server — search, fill, ATS and the demo module.</em></p>
+    </td>
+    <td width="50%" valign="top">
+      <img src="../code/export-demo.png" alt="Demo export: allowlist, no personal data" width="100%" />
+      <p align="center"><em>Demo export — allowlist, no <code>.git</code> and no personal data.</em></p>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <img src="../code/data.png" alt="Local data: profile, history and accounts on disk" width="100%" />
+      <p align="center"><em>Data on your machine — profile, history, accounts and CVs.</em></p>
+    </td>
+    <td width="50%" valign="top">
+      <img src="../code/backup.png" alt="Automatic local backups" width="100%" />
+      <p align="center"><em>Automatic backups — local copies, kept out of git.</em></p>
+    </td>
+  </tr>
+</table>
+
 This is not a microservice monorepo or a cloud ATS. One process, one UI, one managed browser. The demo **does not** reuse the personal boot path: it is a separate module, meant to be shown without leaking private data.
 
 </details>

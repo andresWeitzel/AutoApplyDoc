@@ -199,6 +199,31 @@ autoapply/
     README en español e inglés (este repositorio)
 ```
 
+El repositorio de la **aplicación** es privado: este AutoApplyDoc documenta el producto, no publica el source. Las capturas ilustran piezas reales (servidor, datos locales, backups y el export de la demo) **sin el código completo ni secretos**.
+
+<table>
+  <tr>
+    <td width="50%" valign="top">
+      <img src="./doc/assets/code/server.png" alt="Servidor local: búsqueda, llenado, ATS y demo" width="100%" />
+      <p align="center"><em>Servidor local — búsqueda, llenado, ATS y módulo de demo.</em></p>
+    </td>
+    <td width="50%" valign="top">
+      <img src="./doc/assets/code/export-demo.png" alt="Export de la demo: allowlist, sin datos personales" width="100%" />
+      <p align="center"><em>Export de la demo — allowlist, sin <code>.git</code> ni datos personales.</em></p>
+    </td>
+  </tr>
+  <tr>
+    <td width="50%" valign="top">
+      <img src="./doc/assets/code/data.png" alt="Datos locales: perfil, historial y cuentas en disco" width="100%" />
+      <p align="center"><em>Datos en tu máquina — perfil, historial, cuentas y CVs.</em></p>
+    </td>
+    <td width="50%" valign="top">
+      <img src="./doc/assets/code/backup.png" alt="Backups automáticos locales" width="100%" />
+      <p align="center"><em>Backups automáticos — copias locales, fuera de git.</em></p>
+    </td>
+  </tr>
+</table>
+
 No es un monorepo de microservicios ni un ATS en la nube. Un proceso, una interfaz, un navegador administrado. La demo **no** reutiliza el arranque personal: es un módulo aparte, pensado para mostrarse sin filtrar datos privados.
 
 </details>
